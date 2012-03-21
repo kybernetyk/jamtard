@@ -15,6 +15,7 @@
 		35583A43151A5661001A338C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35583A41151A5661001A338C /* MainMenu.xib */; };
 		35583A4B151A56B8001A338C /* CLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35583A4A151A56B8001A338C /* CLImageView.m */; };
 		35583A4D151A5780001A338C /* robot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35583A4C151A5780001A338C /* robot.jpg */; };
+		35583A50151A5E69001A338C /* CLScreenCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 35583A4F151A5E69001A338C /* CLScreenCapture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		35583A49151A56B8001A338C /* CLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLImageView.h; sourceTree = "<group>"; };
 		35583A4A151A56B8001A338C /* CLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLImageView.m; sourceTree = "<group>"; };
 		35583A4C151A5780001A338C /* robot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = robot.jpg; sourceTree = "<group>"; };
+		35583A4E151A5E69001A338C /* CLScreenCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScreenCapture.h; sourceTree = "<group>"; };
+		35583A4F151A5E69001A338C /* CLScreenCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLScreenCapture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				35583A33151A5661001A338C /* Supporting Files */,
 				35583A49151A56B8001A338C /* CLImageView.h */,
 				35583A4A151A56B8001A338C /* CLImageView.m */,
+				35583A4E151A5E69001A338C /* CLScreenCapture.h */,
+				35583A4F151A5E69001A338C /* CLScreenCapture.m */,
 			);
 			path = jamtard;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				35583A39151A5661001A338C /* main.m in Sources */,
 				35583A40151A5661001A338C /* CLAppDelegate.m in Sources */,
 				35583A4B151A56B8001A338C /* CLImageView.m in Sources */,
+				35583A50151A5E69001A338C /* CLScreenCapture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

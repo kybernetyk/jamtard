@@ -8,13 +8,58 @@
 
 #import "CLAppDelegate.h"
 
-@implementation CLAppDelegate
+@implementation CLAppDelegate {
+	NSTimer *m_captureTimer;
+	CLScreenCapture *m_screenCap;
+}
 
 @synthesize window = m_window;
 @synthesize imageView = m_imageView;
+@synthesize spinner = m_spinner;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[self.imageView setImage: [NSImage imageNamed: @"robot.jpg"]];
+	const char *kommando = [[NSString stringWithFormat: @"open %@", g_browserPath] cStringUsingEncoding: NSUTF8StringEncoding];
+	system(kommando);
+	
+	m_screenCap = [[CLScreenCapture alloc] init];
 }
+
+- (void) handleCaptureTimer: (NSTimer *) timer {
+	//NSImage *img = [m_screenCap captureWindowWithTitle: @"mozilla firefox start page"];
+	NSImage *img = [m_screenCap captureScreenhot];
+	[self.imageView setImage: img];
+	
+	//CLImageView *iv = (CLImageView*)[self.window contentView];
+	//	[iv setImage: img];
+}
+
+
+- (void) findWindow:(id)sender {
+	//	[self.window setOpaque: NO];
+	//	[self.window setBackgroundColor: [NSColor clearColor]];
+	//[[self window] setFrame: [[NSScreen mainScreen] frame] display: YES animate: YES];
+	
+	//[cap updateWindowList];
+	[self handleCaptureTimer: nil];
+	
+}
+
+- (IBAction) startBot:(id)sender {
+	[self.spinner startAnimation: nil];
+	m_captureTimer = [NSTimer 
+					  scheduledTimerWithTimeInterval: 1.0/30.0
+					  target: self
+					  selector: @selector(handleCaptureTimer:) 
+					  userInfo: nil
+					  repeats: YES];
+}
+
+- (IBAction) stopBot:(id)sender {
+	[self.spinner stopAnimation: nil];
+	[m_captureTimer invalidate];
+	m_captureTimer = nil;
+}
+
 
 @end
