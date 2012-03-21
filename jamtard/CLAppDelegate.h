@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CLImageView.h"
 
 @interface CLAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-
+@property (assign) IBOutlet CLImageView *imageView;
 @end

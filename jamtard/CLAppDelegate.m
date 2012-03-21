@@ -10,11 +10,11 @@
 
 @implementation CLAppDelegate
 
-@synthesize window = _window;
+@synthesize window = m_window;
+@synthesize imageView = m_imageView;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	// Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	[self.imageView setImage: [NSImage imageNamed: @"robot.jpg"]];
 }
 
 @end

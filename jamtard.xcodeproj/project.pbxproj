@@ -13,6 +13,8 @@
 		35583A3D151A5661001A338C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 35583A3B151A5661001A338C /* Credits.rtf */; };
 		35583A40151A5661001A338C /* CLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35583A3F151A5661001A338C /* CLAppDelegate.m */; };
 		35583A43151A5661001A338C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35583A41151A5661001A338C /* MainMenu.xib */; };
+		35583A4B151A56B8001A338C /* CLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35583A4A151A56B8001A338C /* CLImageView.m */; };
+		35583A4D151A5780001A338C /* robot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35583A4C151A5780001A338C /* robot.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +23,17 @@
 		35583A2F151A5661001A338C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		35583A30151A5661001A338C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		35583A31151A5661001A338C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		35583A34151A5661001A338C /* jamtard-Info.plist */ = {isa = PBXFileReference; path = "jamtard-Info.plist"; sourceTree = "<group>"; };
+		35583A34151A5661001A338C /* jamtard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "jamtard-Info.plist"; sourceTree = "<group>"; };
 		35583A36151A5661001A338C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35583A38151A5661001A338C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		35583A3A151A5661001A338C /* jamtard-Prefix.pch */ = {isa = PBXFileReference; path = "jamtard-Prefix.pch"; sourceTree = "<group>"; };
+		35583A3A151A5661001A338C /* jamtard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jamtard-Prefix.pch"; sourceTree = "<group>"; };
 		35583A3C151A5661001A338C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		35583A3E151A5661001A338C /* CLAppDelegate.h */ = {isa = PBXFileReference; path = CLAppDelegate.h; sourceTree = "<group>"; };
+		35583A3E151A5661001A338C /* CLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAppDelegate.h; sourceTree = "<group>"; };
 		35583A3F151A5661001A338C /* CLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAppDelegate.m; sourceTree = "<group>"; };
 		35583A42151A5661001A338C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		35583A49151A56B8001A338C /* CLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLImageView.h; sourceTree = "<group>"; };
+		35583A4A151A56B8001A338C /* CLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLImageView.m; sourceTree = "<group>"; };
+		35583A4C151A5780001A338C /* robot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = robot.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,8 @@
 				35583A3F151A5661001A338C /* CLAppDelegate.m */,
 				35583A41151A5661001A338C /* MainMenu.xib */,
 				35583A33151A5661001A338C /* Supporting Files */,
+				35583A49151A56B8001A338C /* CLImageView.h */,
+				35583A4A151A56B8001A338C /* CLImageView.m */,
 			);
 			path = jamtard;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 		35583A33151A5661001A338C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				35583A4C151A5780001A338C /* robot.jpg */,
 				35583A34151A5661001A338C /* jamtard-Info.plist */,
 				35583A35151A5661001A338C /* InfoPlist.strings */,
 				35583A38151A5661001A338C /* main.m */,
@@ -157,6 +165,7 @@
 				35583A37151A5661001A338C /* InfoPlist.strings in Resources */,
 				35583A3D151A5661001A338C /* Credits.rtf in Resources */,
 				35583A43151A5661001A338C /* MainMenu.xib in Resources */,
+				35583A4D151A5780001A338C /* robot.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +178,7 @@
 			files = (
 				35583A39151A5661001A338C /* main.m in Sources */,
 				35583A40151A5661001A338C /* CLAppDelegate.m in Sources */,
+				35583A4B151A56B8001A338C /* CLImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
