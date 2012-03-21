@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'jamtard' target in the 'jamtard' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
