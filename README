@@ -1,9 +1,10 @@
 jamtard
 =======
+This is an example app on how to do a quick screen capture on OS X. You can capture either the whole Desktop or just one window.
 
-Planned as a bot for jamlegend.com ... well jam legend shut down :[
+The project is named jamtard as it started out as a bot for playing jam legend - but since jam legend closed it's doors I decided to release this as a sample on screen capturing. The capturing itself is very performant and you can easily capture more than 25 frames per second. The only cpu-hungry operation is drawing the captured NSImage to a custom view.
 
-So now it's just a skeleton project that implements fast screen/window capturing (50fps without any problems) under OS X. One could hook it up to some image recognition algorithm to have fun with ... say ... poker rooms or something. ;)
+But no one says you have to draw the image ... maybe hook it up to OpenCV and write an online poker bot? :]
 
 Licensed under GPL 3 because I love my freedom.
 
