@@ -26,8 +26,8 @@
 }
 
 - (void) handleCaptureTimer: (NSTimer *) timer {
-	//NSImage *img = [m_screenCap captureWindowWithTitle: @"mozilla firefox start page"];
-	NSImage *img = [m_screenCap captureScreenhot];
+	NSImage *img = [m_screenCap captureWindowWithTitle: @"mozilla firefox start page"];
+	//NSImage *img = [m_screenCap captureScreenhot];
 	[self.imageView setImage: img];
 	
 	//CLImageView *iv = (CLImageView*)[self.window contentView];
@@ -35,14 +35,12 @@
 }
 
 
-- (void) findWindow:(id)sender {
-	//	[self.window setOpaque: NO];
-	//	[self.window setBackgroundColor: [NSColor clearColor]];
-	//[[self window] setFrame: [[NSScreen mainScreen] frame] display: YES animate: YES];
-	
-	//[cap updateWindowList];
+- (void) singleShot:(id)sender {
 	[self handleCaptureTimer: nil];
-	
+}
+
+- (void) findWindow:(id)sender {
+	[m_screenCap updateWindowList];
 }
 
 - (IBAction) startBot:(id)sender {

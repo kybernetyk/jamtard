@@ -1,0 +1,11 @@
+jamtard
+=======
+
+Planned as a bot for jamlegend.com ... well jam legend shut down :[
+
+So now it's just a skeleton project that implements fast screen/window capturing (50fps without any problems) under OS X. One could hook it up to some image recognition algorithm to have fun with ... say ... poker rooms or something. ;)
+
+Licensed under GPL 3 because I love my freedom.
+
+(c) Leon Szpilewski, 2012, GPL3
+	mailto: leon.szpilewski@gmail.com

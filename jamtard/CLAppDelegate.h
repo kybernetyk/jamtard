@@ -17,6 +17,7 @@
 @property (assign) IBOutlet NSProgressIndicator *spinner;
 
 - (IBAction) findWindow:(id)sender;
+- (IBAction) singleShot:(id)sender;
 
 - (IBAction) startBot:(id)sender;
 - (IBAction) stopBot:(id)sender;
