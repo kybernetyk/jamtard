@@ -19,8 +19,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[self.imageView setImage: [NSImage imageNamed: @"robot.jpg"]];
-	const char *kommando = [[NSString stringWithFormat: @"open %@", g_browserPath] cStringUsingEncoding: NSUTF8StringEncoding];
-	system(kommando);
+	//const char *kommando = [[NSString stringWithFormat: @"open %@", g_browserPath] cStringUsingEncoding: NSUTF8StringEncoding];
+	//system(kommando);
 	
 	m_screenCap = [[CLScreenCapture alloc] init];
 }
@@ -43,7 +43,7 @@
 	[m_screenCap updateWindowList];
 }
 
-- (IBAction) startBot:(id)sender {
+- (void) startBot:(id)sender {
 	[self.spinner startAnimation: nil];
 	m_captureTimer = [NSTimer 
 					  scheduledTimerWithTimeInterval: 1.0/30.0
@@ -53,7 +53,7 @@
 					  repeats: YES];
 }
 
-- (IBAction) stopBot:(id)sender {
+- (void) stopBot:(id)sender {
 	[self.spinner stopAnimation: nil];
 	[m_captureTimer invalidate];
 	m_captureTimer = nil;
