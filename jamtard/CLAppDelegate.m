@@ -26,8 +26,8 @@
 }
 
 - (void) handleCaptureTimer: (NSTimer *) timer {
-	NSImage *img = [m_screenCap captureWindowWithTitle: @"mozilla firefox start page"];
-	//NSImage *img = [m_screenCap captureScreenhot];
+	//NSImage *img = [m_screenCap captureWindowWithTitle: @"mozilla firefox start page"];
+	NSImage *img = [m_screenCap captureScreenhot];
 	[self.imageView setImage: img];
 	
 	//CLImageView *iv = (CLImageView*)[self.window contentView];
