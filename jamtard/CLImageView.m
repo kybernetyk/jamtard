@@ -8,13 +8,16 @@
 
 #import "CLImageView.h"
 
-@implementation CLImageView
+@implementation CLImageView {
+
+}
 @synthesize image = m_image;
 
 - (void) setImage:(NSImage *)image {
 	m_image = image;
 	[self setNeedsDisplay: YES];
 }
+
 
 - (id)initWithFrame:(NSRect)frame
 {

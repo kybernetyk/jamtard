@@ -58,5 +58,21 @@
 	return img;
 }
 
+- (NSImage *) captureScreenhotBelowWindow: (NSWindow *) window {
+	CGWindowID win_id = (CGWindowID)[window windowNumber];
+	
+	CGImageRef screenShot = CGWindowListCreateImage(CGRectInfinite, 
+													kCGWindowListOptionOnScreenBelowWindow, 
+													win_id, 
+													kCGWindowImageDefault);
+	NSImage *img =  [[NSImage alloc] initWithCGImage: screenShot 
+												size: NSMakeSize(CGImageGetWidth(screenShot), CGImageGetHeight(screenShot))];
+	
+	CGImageRelease(screenShot);
+	return img;
+
+	
+}
+
 
 @end
