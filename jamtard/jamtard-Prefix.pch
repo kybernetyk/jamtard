@@ -4,7 +4,7 @@
 
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>
-
+//#define OPENCV
 	static const NSString *g_browserPath = @"/Applications/FireFox.app";
 
 #endif

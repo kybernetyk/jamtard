@@ -12,6 +12,6 @@
 -(void)updateWindowList;
 -(NSImage *) captureWindowWithTitle: (NSString *) title;
 -(NSImage *) captureScreenhot;
-- (NSImage *) captureScreenhotBelowWindow: (NSWindow *) window;
-
+-(NSImage *) captureScreenhotBelowWindow: (NSWindow *) window;
+-(CGImageRef) captureCGScreenhotBelowWindow: (NSWindow *) window;
 @end

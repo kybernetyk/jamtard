@@ -75,4 +75,15 @@
 }
 
 
+- (CGImageRef) captureCGScreenhotBelowWindow: (NSWindow *) window {
+	CGWindowID win_id = (CGWindowID)[window windowNumber];
+	
+	CGImageRef screenShot = CGWindowListCreateImage(CGRectInfinite, 
+													kCGWindowListOptionOnScreenBelowWindow, 
+													win_id, 
+													kCGWindowImageBoundsIgnoreFraming);
+	return screenShot;
+}
+
+
 @end
