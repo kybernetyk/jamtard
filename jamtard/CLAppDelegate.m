@@ -161,6 +161,7 @@ IplImage *CreateIplImageFromUIImage (CGImageRef imageRef) {
 	//system(kommando);
 	
 	int windowLevel = CGShieldingWindowLevel();
+	windowLevel = NSScreenSaverWindowLevel;
 	//	NSRect windowRect = [[NSScreen mainScreen] frame];
 	
 	// Create transparent window.
@@ -186,6 +187,8 @@ IplImage *CreateIplImageFromUIImage (CGImageRef imageRef) {
 																alpha:0.0]];
 	[m_overlayWindow setOpaque:NO];
 	[m_overlayWindow setIgnoresMouseEvents: YES];
+	[m_overlayWindow setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
+	[m_overlayWindow setCanHide:NO];
 
 	[m_overlayWindow makeKeyAndOrderFront:nil];
 	
@@ -210,9 +213,10 @@ IplImage *CreateIplImageFromUIImage (CGImageRef imageRef) {
 	CGImageRef image = [m_screenCap captureCGScreenhotBelowWindow: m_overlayWindow];
 	
 	//	CGImageRef image = resizeCGImage(img, CGImageGetWidth(img)*SCALE_FACTOR, CGImageGetHeight(img)*SCALE_FACTOR);
-	//	CGImageRelease(img);
+
 	
 	CIImage *iimage = [CIImage imageWithCGImage: image];
+	CGImageRelease(image);
 	//CIImage *_iimage = [CIImage imageWithData: [img TIFFRepresentation]];
 	
 //	CIFilter *scaleFilter = [CIFilter filterWithName:@"CILanczosScaleTransform"];
